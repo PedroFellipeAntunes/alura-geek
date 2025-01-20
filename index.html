@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdutosGeek</title>
+    <link rel="icon" type="image/x-icon" href="/images/game-store.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="/images/game-store.png" alt="Logo">
+        <h1>ProdutosGeek</h1>
+    </header>
+    <main>
+        <div class="lista_produto">
+            <h1>MEUS PRODUTOS:</h1>
+            <ul class="produto_container" alt="produtos" data-lista>
+            </ul>
+        </div>
+        <hr>
+        <div class="adicionar_produto">
+            <h1>ADICIONAR PRODUTO:</h1>
+            <form class="formulario" data-form>
+                <input nome="nome" class="nome_input" required placeholder="nome..."></input>
+                <input nome="valor" class="valor_input" required placeholder="valor..."></input>
+                <input nome="imagem" class="imagem_input" required placeholder="imagem url..."></input>
+                <div class="container_botoes">
+                    <button type="submit" class="guardarBt">Guardar</button>
+                    <button type="button" class="limparBt">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h2>ProdutosGeek</h2>
+        <p class="nome">Desenvolvido por [Pedro Antunes]</p>
+        <p class="data">2025</p>
+    </footer>
+    <script src="./js/mostrarProdutos.js" type="module"></script>
+    <script src="./js/adicionarProduto.js" type="module"></script>
+    <script src="./js/removerProduto.js" type="module"></script>
+    <script src="./js/conversor.js" defer></script>
+    <script src="./js/limparForm.js"></script>
+</body>
+</html>

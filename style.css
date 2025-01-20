@@ -1,0 +1,235 @@
+.mensagem_error {
+    color: red;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    margin: 0;
+    margin-top: 15px;
+}
+
+main {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+}
+
+/* Lista de produtos */
+.lista_produto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%; /* Limita o tamanho máximo a 50% do contêiner pai */
+    max-height: 500px; /* Altura máxima para a seção */
+}
+
+.produto_container {
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 3px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    width: fit-content; /* Ajusta a largura para o conteúdo */
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; /* Adiciona rolagem vertical para os itens */
+    padding: 10px; /* Opcional para espaçamento interno */
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    max-width: inherit;
+    max-height: inherit;
+    border-radius: 3px;
+}
+
+.item .descricao {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item h2, .item p {
+    margin: 0;
+    text-align: center;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 12px;
+    gap: 5px;
+}
+
+.removerBt {
+    background-color: white;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px;
+    display: flex; /* Usar flexbox para centralizar a imagem */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.removerBt img {
+    width: 20px;
+    height: 20px;
+}
+
+.removerBt:hover {
+    cursor: pointer;
+}
+
+/* Border */
+hr {
+    border: 1px solid white;
+    margin: 0;
+}
+
+/* Adicionar produtos */
+.adicionar_produto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.formulario input {
+    height: 25px;
+    border-radius: 3px;
+    border: 0;
+}
+
+.formulario input:focus {
+    outline: none;
+}
+
+.formulario input:active {
+    background-color: black;
+    color: white;
+}
+
+.formulario .container_botoes {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px
+}
+
+.formulario .container_botoes button {
+    flex: 1;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.formulario .container_botoes button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+footer h2, footer p {
+    margin: 0;
+}
+
+@media (max-width: 430px) {
+    main {
+        flex-direction: column;
+    }
+
+    header {
+        justify-items: center;
+    }
+
+    .adicionar_produto h1 {
+        text-align: center;
+    }
+
+    .lista_produto {
+        max-width: 100%;
+    }
+
+    .produto_container {
+        overflow-x: auto; /* Permite o scroll horizontal */
+        flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
+    }
+
+    .item {
+        flex: 0 0 auto; /* Impede que os itens sejam esticados */
+        width: fit-content; /* Define uma largura fixa para os itens, ajuste conforme necessário */
+    }
+}

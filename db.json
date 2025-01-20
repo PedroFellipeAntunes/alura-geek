@@ -1,0 +1,10 @@
+{
+  "produtos": [
+    {
+      "nome": "Game Boy",
+      "valor": 30050,
+      "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Game-Boy-FL.jpg/800px-Game-Boy-FL.jpg",
+      "id": 0
+    }
+  ]
+}
